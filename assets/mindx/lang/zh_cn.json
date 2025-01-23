@@ -1,0 +1,22 @@
+{
+    "item.mindx.processing_catalyst":"加工催化剂",
+    "item.mindx.core_crystal":"核心水晶",
+    "enchantment.mindx.technical":"技术专精",
+    "enchantment.mindx.technical.desc":"增加伤害,提高特定物品的掉落率",
+    "block.mindx.compressed_redstone_block":"压缩红石块",
+    "block.mindx.double_compressed_redstone_block":"二重压缩红石块",
+    "block.mindx.triple_compressed_redstone_block":"三重压缩红石块",
+    "block.mindx.ultimate_compressed_redstone_block":"究极压缩红石块",
+    "block.mindx.extreme_compressed_redstone_block":"终极压缩红石块",
+    "item.mindx.cafe_roll":"咖啡寿司",
+    "item.mindx.chicken_roll_slice": "鸡肉寿司",
+    "item.mindx.chicken_wrap": "老北京鸡肉卷",
+    "item.mindx.egg_roll": "鸡蛋寿司",
+    "item.mindx.hx": "海鲜馅饺子",
+    "item.mindx.jrmg": "鸡肉蘑菇馅饺子",
+    "item.mindx.midori_roll_slice": "曼德拉寿司",
+    "item.mindx.nrdc": "牛肉大葱馅饺子",
+    "item.mindx.tropical_roll": "热带鱼寿司",
+    "item.mindx.xrsc": "鲜肉蔬菜馅饺子",
+    "item.mindx.zrdc": "猪肉大葱馅饺子"
+}
