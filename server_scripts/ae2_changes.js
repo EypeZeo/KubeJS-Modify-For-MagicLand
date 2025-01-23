@@ -198,7 +198,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.extractor('gtceu:fluorixite') //提取液态福鲁伊克斯
         .itemInputs('ae2:fluix_crystal')
         .outputFluids(Fluid.of('gtceu:fluorixite', 10))
-        .duration(800)
+        .duration(100)
         .EUt(32)
     
     //AE2: EXPATTERNPROVIDER: 
