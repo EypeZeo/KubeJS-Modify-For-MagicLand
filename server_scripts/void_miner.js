@@ -1,6 +1,7 @@
 ServerEvents.recipes(event => {
+    const [ ULV, LV, MV, HV, EV, IV, LuV, ZPM, UV, UHV, UEV, UIV, UXV, OpV, MAX ] = GTValues.VA
     const gtr = event.recipes.gtceu;
-
+    
     const rawMaterials = [
         "minecraft:diamond",
         "minecraft:emerald",
@@ -135,13 +136,142 @@ ServerEvents.recipes(event => {
         "thermal:raw_silver",
         "gtceu:raw_beryllium"
     ];
-
-    rawMaterials.forEach((material, index) => {
-        gtr.void_miner(`mine_output_${index}`)
+    
+    rawMaterials.forEach((rawMaterials) => {
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "ULV") // ULV级别
             .inputFluids(Fluid.of('minecraft:water', 1000))
             .outputFluids(Fluid.of('gtceu:steam', 1000))
-            .itemOutputs(material) // 不同配方输出不同物品
-            .duration(500)
-            .EUt(2048);
-    });
-});
+            .itemInputs(rawMaterials)
+            .itemOutputs("2x " + rawMaterials)
+            .EUt(8)
+            .circuit(0)
+            .duration(400)
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "LV") // LV级别
+            .inputFluids(Fluid.of('minecraft:water', 2000))
+            .outputFluids(Fluid.of('gtceu:steam', 2000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("3x " + rawMaterials)
+            .EUt(32)
+            .circuit(1)
+            .duration(200)
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "MV") // MV级别
+            .inputFluids(Fluid.of('minecraft:water', 3000))
+            .outputFluids(Fluid.of('gtceu:steam', 3000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("5x " + rawMaterials)
+            .EUt(128)
+            .circuit(2)
+            .duration(100);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "HV") // HV级别
+            .inputFluids(Fluid.of('minecraft:water', 4000))
+            .outputFluids(Fluid.of('gtceu:steam', 4000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("8x " + rawMaterials)
+            .EUt(512)
+            .circuit(3)
+            .duration(80);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "EV") // EV级别
+            .inputFluids(Fluid.of('minecraft:water', 5000))
+            .outputFluids(Fluid.of('gtceu:steam', 5000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("10x " + rawMaterials)
+            .EUt(2048)
+            .circuit(4)
+            .duration(60);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "IV") // IV级别
+            .inputFluids(Fluid.of('minecraft:water', 6000))
+            .outputFluids(Fluid.of('gtceu:steam', 6000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("12x " + rawMaterials)
+            .EUt(8192)
+            .circuit(5)
+            .duration(50);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "LuV") // LuV级别
+            .inputFluids(Fluid.of('minecraft:water', 7000))
+            .outputFluids(Fluid.of('gtceu:steam', 7000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("15x " + rawMaterials)
+            .EUt(32768)
+            .circuit(6)
+            .duration(45);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "ZPM") // ZPM级别
+            .inputFluids(Fluid.of('minecraft:water', 8000))
+            .outputFluids(Fluid.of('gtceu:steam', 8000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("18x " + rawMaterials)
+            .EUt(131072)
+            .circuit(7)
+            .duration(40);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "UV") // UV级别
+            .inputFluids(Fluid.of('minecraft:water', 9000))
+            .outputFluids(Fluid.of('gtceu:steam', 9000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("20x " + rawMaterials)
+            .EUt(524288)
+            .circuit(8)
+            .duration(35);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "UHV") // UHV级别
+            .inputFluids(Fluid.of('minecraft:water', 10000))
+            .outputFluids(Fluid.of('gtceu:steam', 10000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("30x " + rawMaterials)
+            .EUt(2097152)
+            .circuit(9)
+            .duration(30);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "UEV") // UEV级别
+            .inputFluids(Fluid.of('minecraft:water', 11000))
+            .outputFluids(Fluid.of('gtceu:steam', 11000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("50x " + rawMaterials)
+            .EUt(8388608)
+            .circuit(10)
+            .duration(25);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "UIV") // UIV级别
+            .inputFluids(Fluid.of('minecraft:water', 12000))
+            .outputFluids(Fluid.of('gtceu:steam', 12000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("80x " + rawMaterials)
+            .EUt(33554432)
+            .circuit(11)
+            .duration(20);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "UXV") // UXV级别
+            .inputFluids(Fluid.of('minecraft:water', 13000))
+            .outputFluids(Fluid.of('gtceu:steam', 13000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("100x " + rawMaterials)
+            .EUt(134217728)
+            .circuit(12)
+            .duration(15);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "OpV") // OpV级别
+            .inputFluids(Fluid.of('minecraft:water', 14000))
+            .outputFluids(Fluid.of('gtceu:steam', 14000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("120x " + rawMaterials)
+            .EUt(536870912)
+            .circuit(13)
+            .duration(10);
+
+        gtr.void_miner("nether_void_ore_" + rawMaterials + "_" + "MAX") // MAX级别
+            .inputFluids(Fluid.of('minecraft:water', 15000))
+            .outputFluids(Fluid.of('gtceu:steam', 15000))
+            .itemInputs(rawMaterials)
+            .itemOutputs("150x " + rawMaterials)
+            .EUt(2147483647)
+            .circuit(14)
+            .duration(5);
+
+    })
+})
