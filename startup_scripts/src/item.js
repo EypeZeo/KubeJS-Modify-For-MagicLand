@@ -35,6 +35,7 @@ StartupEvents.registry('item',event=>{
     event.create('mindx:dg',"basic").displayName("点歌")
     event.create('mindx:jineng',"basic").displayName("技能")
     event.create('mindx:forge',"basic").displayName("锻造")
+    event.create('mindx:alloy_elector',"basic").displayName("量子能量晶体").tooltip(Component.yellow("万千能量,皆聚于此"))
     event.create('mindx:nrdc').food(food => {
         food
           .hunger(6)
