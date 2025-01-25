@@ -5,5 +5,7 @@
     "gtceu.quantum_energy_compressor": "量子能量压缩",
     "block.gtceu.quantum_energy_decompressor": "量子能量解压机",
     "gtceu.quantum_energy_decompressor": "量子能量解压",
+    "block.gtceu.quantum_energy_liquefier": "量子能量液化器",
+    "gtceu.quantum_energy_liquefier": "量子能量液化",
     "gtceu.quantum_energy_compressor.description": "将输入的能量通过量子压缩技术转化为一种高密度的能量实体"
 }
