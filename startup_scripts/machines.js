@@ -89,5 +89,32 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("#", Predicates.air())
                 .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_robust_tungstensteel", "gtceu:block/multiblock/large_miner")
+    
+    event.create("quantum_energy_liquefier", "multiblock") //量子能量液化器
+        .rotationState(RotationState.NON_Y_AXIS)
+        .allowExtendedFacing(false)
+        .recipeType("quantum_energy_liquefier")
+        .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
+        .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
+            Component.translatable("gtceu.quantum_energy_liquefier")))
+        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK))
+        .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
+        .pattern((definition) =>
+            FactoryBlockPattern.start()
+                .aisle("CCCCC", "CXXXC", "#####", "#####", "#####", "#####","#####")
+                .aisle("CCCCC", "XCCCX", "#DDD#", "#DDD#", "#DDD#", "#G#G#","#####")
+                .aisle("CCCCC", "XCCCX", "#DBD#", "#DBD#", "#DBD#", "##C##","##G##")
+                .aisle("CCCCC", "XCCCX", "#DDD#", "#DDD#", "#DDD#", "#G#G#","#####")
+                .aisle("CCCCC", "CSCCC", "#####", "#####", "#####", "#####","#####")
+                .where("S", Predicates.controller(Predicates.blocks(definition.get())))
+                .where("X", Predicates.blocks("gtceu:stable_machine_casing")
+                    .or(Predicates.autoAbilities(definition.getRecipeTypes())))
+                .where("C", Predicates.blocks("gtceu:stable_machine_casing"))
+                .where("G", Predicates.blocks("gtceu:titanium_frame"))
+                .where("B", Predicates.blocks("gtceu:titanium_firebox_casing"))
+                .where("D", Predicates.blocks("gtceu:cupronickel_coil_block"))
+                .where("#", Predicates.air())
+                .build())
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_stable_titanium", "gtceu:block/multiblock/large_miner")
 
 })

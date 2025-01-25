@@ -62,6 +62,9 @@ GTCEuStartupEvents.registry('gtceu:material', e => {
         )
         // 添加导线属性，使用高压电压区间
         .cableProperties(1024, 1, 16, false); // 电压: 1024（EV）, 电流: 1, 损耗: 16, 非超导体
-    
 
+    e.create('quantum_liquid_energy')
+        .color(0x96F0FB)
+        .secondaryColor(0x96ADFB)
+        ['fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidBuilder)'](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(200))
 })
