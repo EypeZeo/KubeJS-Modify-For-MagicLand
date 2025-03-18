@@ -35,6 +35,10 @@ StartupEvents.registry('item',event=>{
     event.create('mindx:dg',"basic").displayName("点歌")
     event.create('mindx:jineng',"basic").displayName("技能")
     event.create('mindx:forge',"basic").displayName("锻造")
+    event.create('mindx:uev_processor_mainframe',"basic").displayName("超能处理器主机")
+    event.create('mindx:uiv_processor_mainframe',"basic").displayName("超能II型处理器主机")
+    event.create('mindx:uxv_processor_mainframe',"basic").displayName("终极处理器主机")
+    event.create('mindx:opv_processor_mainframe',"basic").displayName("终极II型处理器主机")
     event.create('mindx:alloy_elector',"basic").displayName("量子能量晶体").tooltip(Component.yellow("万千能量,皆聚于此"))
     event.create('mindx:nrdc').food(food => {
         food
